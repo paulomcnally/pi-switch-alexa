@@ -20,6 +20,16 @@ https://thepihut.com/blogs/raspberry-pi-tutorials/27968772-turning-on-an-led-wit
 
 ```
 FAUXMOS = [
+        ['led', gpio_handler(18)],
+    ]
+```
+
+## Two more LEDs
+
+https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/2-two-more-leds/
+
+```
+FAUXMOS = [
         ['red led', gpio_handler(17)],
         ['green led', gpio_handler(18)],
     ]
