@@ -1,4 +1,4 @@
-# pi-wemo-switch-alexa
+# pi-switch-alexa
 
 Copy `fauxmo.py` in the raspberry pi and run:
 
