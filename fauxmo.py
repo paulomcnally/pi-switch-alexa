@@ -417,8 +417,8 @@ class gpio_handler(object):
 # ]
 
 # FAUXMOS = [
-#        ['office lights', gpio_handler(35)],
-#        ['kitchen lights', gpio_handler(37)],
+#        ['red led', gpio_handler(17)],
+#        ['green led', gpio_handler(18)],
 #    ]
 
 FAUXMOS = [
