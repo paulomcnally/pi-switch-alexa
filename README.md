@@ -1,22 +1,38 @@
 # pi-switch-alexa
 
-Copy `fauxmo.py` in the raspberry pi and run:
+Emulated [Belkin WeMo](https://www.belkin.com/us/Products/smarthome-iot/c/wemo/) devices that work with the Amazon Echo.
 
-```
-$ python fauxmo.py 
-```
-
-Require:
+# Require
 
 ```
 sudo pip install requests
 ```
 
-**Source**: https://github.com/makermusings/fauxmo
+# Install
 
-## Turning on an LED with your Raspberry Pi's GPIO Pins
+```
+$ cd
+$ git clone https://github.com/paulomcnally/pi-switch-alexa.git
+$ cd pi-switch-alexa
+```
 
-https://thepihut.com/blogs/raspberry-pi-tutorials/27968772-turning-on-an-led-with-your-raspberry-pis-gpio-pins
+# Run
+
+```
+$ python fauxmo.py
+```
+
+## Daemon
+
+```
+$ sudo cp pi-switch-alexa /etc/init.d/pi-switch-alexa
+$ sudo chmod 755 /etc/init.d/pi-switch-alexa
+$ sudo update-rc.d pi-switch-alexa defaults
+```
+
+## Examples
+
+[Turning on an LED with your Raspberry Pi's GPIO Pins](https://thepihut.com/blogs/raspberry-pi-tutorials/27968772-turning-on-an-led-with-your-raspberry-pis-gpio-pins)
 
 ```
 FAUXMOS = [
@@ -24,9 +40,9 @@ FAUXMOS = [
     ]
 ```
 
-## Two more LEDs
 
-https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/2-two-more-leds/
+[Two more LEDs](https://projects.drogon.net/raspberry-pi/gpio-examples/tux-crossing/2-two-more-leds/)
+
 
 ```
 FAUXMOS = [
@@ -34,3 +50,7 @@ FAUXMOS = [
         ['green led', gpio_handler(18)],
     ]
 ```
+
+# Source
+
+https://github.com/makermusings/fauxmo
